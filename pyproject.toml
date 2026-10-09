@@ -13,3 +13,6 @@ dependencies = [
     "fluentogram==1.1.7",
     "python-dotenv==1.2.2"
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]
