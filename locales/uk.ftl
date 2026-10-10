@@ -8,7 +8,7 @@ my_account =
     <tg-emoji emoji-id='5203996991054432397'>🎁</tg-emoji>Придбано зірок | подарунків: <b>{ $stars } | { $gifts }</b>
     <tg-emoji emoji-id='6273842691306426529'>⭐</tg-emoji>Преміум: <b>{ $premium } міс.</b>
 
-    <tg-emoji emoji-id='5235895962269935073'>🗓</tg-emoji>Дата реєстрації: <b>{ $date }</b>
+    <tg-emoji emoji-id='5235895962269935073'>🗓</tg-emoji>Дата реєстрації: <b>{ DateTime($date) }</b>
 
 btn_cupon = Промокод
 btn_referral = Запросити друга
@@ -27,3 +27,6 @@ ur_language = Ти зараз використовуєш цю мову
 change_language = Мову змінено
 
 lang_error = Помилка зміни мови
+
+support_text = @username
+btn_back_settings = Назад

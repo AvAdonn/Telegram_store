@@ -4,6 +4,7 @@ from aiogram import Router, F
 from database.models import User
 from sqlalchemy.ext.asyncio import AsyncSession
 
+
 from aiogram.exceptions import TelegramBadRequest
 
 from fluentogram import TranslatorRunner

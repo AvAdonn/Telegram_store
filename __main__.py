@@ -14,7 +14,6 @@ from middleware.auth import AuthMiddleware
 from middleware.i18n_md import TraslatorRunnerMiddleware
 from handlers import get_routers
 
-
 setup_logger()
 logger = logging.getLogger(__name__)
 logger.info('Логування завершено. Підготовка запуску...')
@@ -51,7 +50,7 @@ async def main() -> None:
         dp.shutdown.register(on_finish)
         
         await bot.delete_webhook(drop_pending_updates=True)
-        await dp.start_polling(bot)    
+        await dp.start_polling(bot, hub=translator_hub)    
     except Exception as e:
         logger.critical(
             f'Критична помилка під час запуску: {e}',

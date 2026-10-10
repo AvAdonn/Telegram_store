@@ -27,3 +27,7 @@ back = Back
 ur_language = You are already using this language
 change_language = Language changed successfully
 lang_error = Error changing language
+
+support_text = @user_name
+
+btn_back_settings = Back

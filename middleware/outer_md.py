@@ -29,5 +29,5 @@ class DBMiddleware(BaseMiddleware):
                 data['user_in_db'] = None
                 logger.info('[DBM]Користувача(None) авантажено в дату')
                 
-        return await handler(event, data)
+            return await handler(event, data)
     

@@ -40,7 +40,7 @@ async def change_language(code: str, user: User, session: AsyncSession) -> bool:
         user.language = code
         await session.merge(user)
         await session.commit()
-        logger.debug('Зміну мови збережено в базі')
+        logger.debug(f'Зміну мови збережено в базі -> {code}')
         
         return True
     

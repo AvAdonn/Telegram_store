@@ -39,7 +39,7 @@ def settings(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
     )
     builder.button(
         text=i18n.get('btn_politic'),
-        callback_data='set:policy',
+        url='https://telegra.ph/Terms-of-Service--Privacy-Policy-10-10',
         icon_custom_emoji_id='5974229895906069525'
     )
     builder.button(
@@ -53,7 +53,7 @@ def settings(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
     
     return builder.as_markup()
 
-def language_choise(i18n: TranslatorRunner, current_language: str | None) -> InlineKeyboardMarkup:
+def language_choise(new_i18n: TranslatorRunner, current_language: str | None) -> InlineKeyboardMarkup:
     builder = InlineKeyboardBuilder()
     
     for code, text in config.AVAILABLE_LANGUAGES.items():
@@ -64,10 +64,20 @@ def language_choise(i18n: TranslatorRunner, current_language: str | None) -> Inl
         )
         
     builder.button(
-        text=i18n.get('back', locale=current_language),
+        text=new_i18n.get('back'),
         callback_data='back_settings'
     )
     
     builder.adjust(2,1)
+    
+    return builder.as_markup()
+
+def back_settings(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
+    builder = InlineKeyboardBuilder()
+    text = i18n.get('btn_back_settings')
+    builder.button(
+        text=text,
+        callback_data='back_settings'
+    )
     
     return builder.as_markup()
