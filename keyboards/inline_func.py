@@ -1,6 +1,9 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from fluentogram import TranslatorRunner
+import config.languages as config
+from keyboards.callback import LanguageCallback
+
 
 def my_account(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
     
@@ -23,5 +26,48 @@ def my_account(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
         icon_custom_emoji_id='5377599075237502153'
     )
     builder.adjust(2, 1)
+    
+    return builder.as_markup()
+
+def settings(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
+    builder = InlineKeyboardBuilder()
+    
+    builder.button(
+        text=i18n.get('btn_language'),
+        callback_data='set:language',
+        icon_custom_emoji_id='4940645878684713890'
+    )
+    builder.button(
+        text=i18n.get('btn_politic'),
+        callback_data='set:policy',
+        icon_custom_emoji_id='5974229895906069525'
+    )
+    builder.button(
+        text=i18n.get('btn_support'),
+        callback_data='set:support',
+        style='success',
+        icon_custom_emoji_id='5443038326535759644'
+    )
+    
+    builder.adjust(2, 1)
+    
+    return builder.as_markup()
+
+def language_choise(i18n: TranslatorRunner, current_language: str | None) -> InlineKeyboardMarkup:
+    builder = InlineKeyboardBuilder()
+    
+    for code, text in config.AVAILABLE_LANGUAGES.items():
+        text = f'•{text}' if code == current_language else text
+        builder.button(
+            text=text,
+            callback_data=LanguageCallback(code=code).pack(),
+        )
+        
+    builder.button(
+        text=i18n.get('back', locale=current_language),
+        callback_data='back_settings'
+    )
+    
+    builder.adjust(2,1)
     
     return builder.as_markup()

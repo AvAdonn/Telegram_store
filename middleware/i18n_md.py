@@ -29,7 +29,14 @@ class TraslatorRunnerMiddleware(BaseMiddleware):
         else:
             user = data.get('event_from_user')
             language_code = user.language_code if user else 'en'
-            
+        
+        logger.warning(
+            "I18N MIDDLEWARE: telegram=%r, db=%r, selected=%r",
+            getattr(data.get("event_from_user"), "language_code", None),
+            getattr(data.get("user_in_db"), "language", None),
+            language_code,
+        )
+        
         i18n_translator = self.hub.get_translator_by_locale(language_code)
         data['i18n'] = i18n_translator
         logger.info(f'[TRM] Перекладач завантажено для мови: {language_code}')

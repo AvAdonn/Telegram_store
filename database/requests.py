@@ -33,3 +33,19 @@ async def add_user(
     except SQLAlchemyError as e:
         await session.rollback()
         logger.info(f'Помилка при додаванні користувача({tg_id}): {e}', exc_info=True)
+        
+
+async def change_language(code: str, user: User, session: AsyncSession) -> bool:
+    try:
+        user.language = code
+        await session.merge(user)
+        await session.commit()
+        logger.debug('Зміну мови збережено в базі')
+        
+        return True
+    
+    except Exception as e:
+        logger.error(f'Невдалося змінити мову користувача: {user.tg_id} -> {e}')
+        await session.rollback()
+        
+        return False

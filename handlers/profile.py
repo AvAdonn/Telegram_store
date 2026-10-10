@@ -42,8 +42,17 @@ async def my_account(
         await message.delete()
     except TelegramBadRequest:
         pass
+    logger.warning(
+        "PROFILE I18N: object=%s, caption=%r, referral=%r, "
+        "calculate=%r, coupon=%r",
+        id(i18n),
+        i18n.get("my_account"),
+        i18n.get("btn_referral"),
+        i18n.get("btn_calculate"),
+        i18n.get("btn_cupon"),
+    )
     await message.answer_photo(
-        photo=config.MY_ACCOUNT.get('my_account'),
+        photo=config.MY_ACCOUNT['my_account'],
         caption=text,
         parse_mode='HTML',
         reply_markup=inl.my_account(i18n)
