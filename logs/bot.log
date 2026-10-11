@@ -5242,3 +5242,1167 @@ ERROR    | 2026-10-10 22:08:41,731 | aiogram.dispatcher:226 | Failed to fetch up
 WARNING  | 2026-10-10 22:08:41,731 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8601241933)
 INFO     | 2026-10-10 22:08:41,991 | aiogram.dispatcher:414 | Polling stopped for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
 INFO     | 2026-10-10 22:08:41,993 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-10 23:45:39,310 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-10 23:45:40,089 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-10 23:45:40,094 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-10 23:45:40,097 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-10 23:45:40,173 | aiogram.dispatcher:379 | Run polling for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-10 23:45:55,437 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:45:55,438 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db=None, selected='uk'
+INFO     | 2026-10-10 23:45:55,438 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-10 23:45:55,732 | aiogram.event:179 | Update id=363868636 is handled. Duration 328 ms by bot id=8601241933
+INFO     | 2026-10-10 23:46:02,281 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:46:02,281 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db=None, selected='uk'
+INFO     | 2026-10-10 23:46:02,281 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-10 23:46:02,282 | handlers.basic:47 | User 8885199631: Telegram language_code: uk
+INFO     | 2026-10-10 23:46:02,292 | database.requests:32 | Нового користувача(8885199631) зареєстровано в базі
+INFO     | 2026-10-10 23:46:02,506 | aiogram.event:179 | Update id=363868637 is handled. Duration 218 ms by bot id=8601241933
+INFO     | 2026-10-10 23:46:04,756 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:46:04,757 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-10 23:46:04,757 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-10 23:46:04,935 | aiogram.event:179 | Update id=363868638 is not handled. Duration 203 ms by bot id=8601241933
+ERROR    | 2026-10-10 23:46:04,938 | aiogram.event:326 | Cause exception while process update id=363868638 by bot id=8601241933
+FluentReferenceError: locales/en.ftl:11:82: Unknown external: date
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\profile.py", line 50, in my_account
+    i18n.get("my_account"),
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\fluentogram\src\impl\runner.py", line 23, in get
+    return self._get_translation(key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\fluentogram\src\impl\runner.py", line 28, in _get_translation
+    return translator.get(key, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\fluentogram\src\impl\translator.py", line 24, in get
+    raise errors.pop()
+fluent_compiler.errors.FluentReferenceError: locales/en.ftl:11:82: Unknown external: date
+INFO     | 2026-10-10 23:48:54,608 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-10 23:48:54,608 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-10 23:48:54,608 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-10 23:48:54,608 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8601241933)
+INFO     | 2026-10-10 23:48:54,872 | aiogram.dispatcher:414 | Polling stopped for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-10 23:48:54,872 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-10 23:49:03,022 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-10 23:49:03,239 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-10 23:49:03,247 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-10 23:49:03,247 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-10 23:49:03,314 | aiogram.dispatcher:379 | Run polling for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-10 23:49:54,837 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:49:54,840 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-10 23:49:54,841 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-10 23:49:55,442 | aiogram.event:179 | Update id=363868639 is handled. Duration 610 ms by bot id=8601241933
+INFO     | 2026-10-10 23:50:24,437 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-10 23:50:24,437 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-10 23:50:24,437 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-10 23:50:24,437 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8601241933)
+INFO     | 2026-10-10 23:50:24,695 | aiogram.dispatcher:414 | Polling stopped for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-10 23:50:24,695 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-10 23:50:37,975 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-10 23:50:38,221 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-10 23:50:38,221 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-10 23:50:38,221 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-10 23:50:38,270 | aiogram.dispatcher:379 | Run polling for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-10 23:50:48,728 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:50:48,729 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-10 23:50:48,729 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-10 23:50:49,233 | aiogram.event:179 | Update id=363868640 is handled. Duration 516 ms by bot id=8601241933
+INFO     | 2026-10-10 23:55:25,098 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-10 23:55:25,098 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-10 23:55:25,098 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-10 23:55:25,098 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8601241933)
+INFO     | 2026-10-10 23:55:25,357 | aiogram.dispatcher:414 | Polling stopped for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-10 23:55:25,357 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-10 23:55:34,409 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-10 23:55:34,617 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-10 23:55:34,623 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-10 23:55:34,624 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-10 23:55:34,680 | aiogram.dispatcher:379 | Run polling for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-10 23:55:52,923 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:55:52,923 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-10 23:55:52,923 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-10 23:55:53,798 | aiogram.event:179 | Update id=363868641 is handled. Duration 875 ms by bot id=8601241933
+INFO     | 2026-10-10 23:56:03,771 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:56:03,772 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-10 23:56:03,772 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-10 23:56:04,143 | aiogram.event:179 | Update id=363868642 is handled. Duration 375 ms by bot id=8601241933
+INFO     | 2026-10-10 23:56:25,837 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:56:25,837 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-10 23:56:25,837 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-10 23:56:26,213 | aiogram.event:179 | Update id=363868643 is handled. Duration 390 ms by bot id=8601241933
+INFO     | 2026-10-10 23:56:47,744 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-10 23:56:47,744 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-10 23:56:47,744 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-10 23:56:48,100 | aiogram.event:179 | Update id=363868644 is handled. Duration 358 ms by bot id=8601241933
+ERROR    | 2026-10-11 11:32:54,161 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING  | 2026-10-11 11:32:54,168 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8601241933)
+INFO     | 2026-10-11 11:33:25,805 | aiogram.dispatcher:240 | Connection established (tryings = 1, bot id = 8601241933)
+INFO     | 2026-10-11 11:36:40,385 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 11:36:40,387 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 11:36:40,395 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 11:36:40,395 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8601241933)
+INFO     | 2026-10-11 11:36:40,659 | aiogram.dispatcher:414 | Polling stopped for bot @test_custom_emoji_bot id=8601241933 - 'Test custom_emoji'
+INFO     | 2026-10-11 11:36:40,668 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 11:36:55,295 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 11:36:56,032 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 11:36:56,032 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 11:36:56,032 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 11:36:56,076 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 11:37:00,774 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:37:00,782 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 11:37:00,782 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:37:01,026 | aiogram.event:179 | Update id=592228845 is handled. Duration 281 ms by bot id=8560838161
+INFO     | 2026-10-11 11:37:03,415 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:37:03,416 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 11:37:03,416 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:37:03,804 | aiogram.event:179 | Update id=592228846 is not handled. Duration 391 ms by bot id=8560838161
+ERROR    | 2026-10-11 11:37:03,804 | aiogram.event:326 | Cause exception while process update id=592228846 by bot id=8560838161
+TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\profile.py", line 54, in my_account
+    await message.answer_photo(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\bot.py", line 515, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+INFO     | 2026-10-11 11:37:04,842 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:37:04,843 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 11:37:04,845 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:37:05,042 | aiogram.event:179 | Update id=592228847 is not handled. Duration 203 ms by bot id=8560838161
+ERROR    | 2026-10-11 11:37:05,043 | aiogram.event:326 | Cause exception while process update id=592228847 by bot id=8560838161
+TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\profile.py", line 54, in my_account
+    await message.answer_photo(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\bot.py", line 515, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+INFO     | 2026-10-11 11:37:23,539 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:37:23,540 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 11:37:23,540 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:37:23,920 | aiogram.event:179 | Update id=592228848 is not handled. Duration 391 ms by bot id=8560838161
+ERROR    | 2026-10-11 11:37:23,920 | aiogram.event:326 | Cause exception while process update id=592228848 by bot id=8560838161
+TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\settings.py", line 31, in btn_settings
+    await message.answer_photo(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\methods\base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\bot.py", line 515, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 177, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\client\session\base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: wrong file identifier/HTTP URL specified
+INFO     | 2026-10-11 11:39:08,541 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:39:08,553 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 11:39:08,555 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:39:08,638 | aiogram.event:179 | Update id=592228849 is handled. Duration 110 ms by bot id=8560838161
+INFO     | 2026-10-11 11:39:17,862 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:39:17,863 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 11:39:17,864 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:39:17,962 | aiogram.event:179 | Update id=592228850 is handled. Duration 108 ms by bot id=8560838161
+INFO     | 2026-10-11 11:39:45,381 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 11:39:45,381 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 11:39:45,384 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 11:39:45,384 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 11:39:45,640 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 11:39:45,640 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 11:39:53,248 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 11:39:53,690 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 11:39:53,690 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 11:39:53,690 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 11:39:53,747 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 11:40:00,786 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:40:00,787 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 11:40:00,788 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:40:01,080 | aiogram.event:179 | Update id=592228851 is handled. Duration 311 ms by bot id=8560838161
+INFO     | 2026-10-11 11:40:43,259 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:40:43,260 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:40:43,265 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:40:43,488 | aiogram.event:179 | Update id=592228852 is handled. Duration 235 ms by bot id=8560838161
+INFO     | 2026-10-11 11:40:52,326 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:40:52,327 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:40:52,327 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:40:52,508 | aiogram.event:179 | Update id=592228853 is handled. Duration 187 ms by bot id=8560838161
+INFO     | 2026-10-11 11:40:55,620 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:40:55,621 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:40:55,621 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:40:55,777 | aiogram.event:179 | Update id=592228854 is handled. Duration 171 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:07,128 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:07,129 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:07,129 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:07,226 | aiogram.event:179 | Update id=592228855 is handled. Duration 93 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:11,636 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:11,640 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:11,641 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:11,889 | aiogram.event:179 | Update id=592228856 is handled. Duration 266 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:13,759 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:13,760 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:41:13,760 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:41:13,926 | aiogram.event:179 | Update id=592228857 is handled. Duration 172 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:16,502 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:16,503 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:16,504 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:16,782 | aiogram.event:179 | Update id=592228858 is handled. Duration 296 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:38,179 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:38,183 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:38,188 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:38,428 | aiogram.event:179 | Update id=592228859 is handled. Duration 250 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:42,369 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:42,369 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:42,369 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:42,549 | aiogram.event:179 | Update id=592228860 is handled. Duration 187 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:44,083 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:44,083 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:44,084 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:44,258 | aiogram.event:179 | Update id=592228861 is handled. Duration 172 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:44,843 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:44,843 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:44,843 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:44,955 | aiogram.event:179 | Update id=592228862 is handled. Duration 108 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:45,650 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:45,651 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 11:41:45,651 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 11:41:45,962 | aiogram.event:179 | Update id=592228863 is handled. Duration 327 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:46,510 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:46,511 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:41:46,512 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:41:46,693 | aiogram.event:179 | Update id=592228864 is handled. Duration 187 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:49,627 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:49,629 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:41:49,631 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:41:49,829 | aiogram.event:179 | Update id=592228865 is handled. Duration 202 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:51,858 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:51,861 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:41:51,861 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:41:51,871 | aiogram.event:179 | Update id=592228866 is not handled. Duration 31 ms by bot id=8560838161
+INFO     | 2026-10-11 11:41:52,146 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:41:52,194 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:41:52,244 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:41:52,308 | aiogram.event:179 | Update id=592228867 is not handled. Duration 202 ms by bot id=8560838161
+INFO     | 2026-10-11 11:43:43,606 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:43:43,607 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 11:43:43,607 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:43:44,201 | aiogram.event:179 | Update id=592228868 is handled. Duration 608 ms by bot id=8560838161
+INFO     | 2026-10-11 11:45:54,415 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:45:54,416 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:45:54,416 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:45:54,420 | aiogram.event:179 | Update id=592228869 is not handled. Duration 16 ms by bot id=8560838161
+INFO     | 2026-10-11 11:45:54,556 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:45:54,558 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:45:54,559 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:45:54,563 | aiogram.event:179 | Update id=592228870 is not handled. Duration 15 ms by bot id=8560838161
+INFO     | 2026-10-11 11:45:54,756 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:45:54,759 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:45:54,759 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:45:54,763 | aiogram.event:179 | Update id=592228871 is not handled. Duration 16 ms by bot id=8560838161
+INFO     | 2026-10-11 11:45:55,609 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 11:45:55,611 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 11:45:55,613 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 11:45:55,618 | aiogram.event:179 | Update id=592228872 is handled. Duration 0 ms by bot id=8560838161
+ERROR    | 2026-10-11 12:08:51,748 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING  | 2026-10-11 12:08:51,757 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+ERROR    | 2026-10-11 12:09:13,798 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:09:13,798 | aiogram.dispatcher:228 | Sleep for 1.354826 seconds and try again... (tryings = 1, bot id = 8560838161)
+ERROR    | 2026-10-11 12:09:36,175 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:09:36,176 | aiogram.dispatcher:228 | Sleep for 1.533994 seconds and try again... (tryings = 2, bot id = 8560838161)
+ERROR    | 2026-10-11 12:09:58,749 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:09:58,749 | aiogram.dispatcher:228 | Sleep for 1.766435 seconds and try again... (tryings = 3, bot id = 8560838161)
+ERROR    | 2026-10-11 12:10:21,542 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:10:21,542 | aiogram.dispatcher:228 | Sleep for 2.272415 seconds and try again... (tryings = 4, bot id = 8560838161)
+ERROR    | 2026-10-11 12:10:44,866 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:10:44,866 | aiogram.dispatcher:228 | Sleep for 3.026703 seconds and try again... (tryings = 5, bot id = 8560838161)
+ERROR    | 2026-10-11 12:11:08,930 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:11:08,930 | aiogram.dispatcher:228 | Sleep for 3.975991 seconds and try again... (tryings = 6, bot id = 8560838161)
+ERROR    | 2026-10-11 12:11:33,954 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:11:33,954 | aiogram.dispatcher:228 | Sleep for 4.957919 seconds and try again... (tryings = 7, bot id = 8560838161)
+ERROR    | 2026-10-11 12:11:59,946 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:11:59,952 | aiogram.dispatcher:228 | Sleep for 5.063416 seconds and try again... (tryings = 8, bot id = 8560838161)
+ERROR    | 2026-10-11 12:12:26,059 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:12:26,059 | aiogram.dispatcher:228 | Sleep for 5.047727 seconds and try again... (tryings = 9, bot id = 8560838161)
+ERROR    | 2026-10-11 12:12:52,146 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:12:52,147 | aiogram.dispatcher:228 | Sleep for 4.961780 seconds and try again... (tryings = 10, bot id = 8560838161)
+ERROR    | 2026-10-11 12:13:18,171 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:13:18,171 | aiogram.dispatcher:228 | Sleep for 5.058794 seconds and try again... (tryings = 11, bot id = 8560838161)
+ERROR    | 2026-10-11 12:13:44,286 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The semaphore timeout period has expired]
+WARNING  | 2026-10-11 12:13:44,287 | aiogram.dispatcher:228 | Sleep for 5.008198 seconds and try again... (tryings = 12, bot id = 8560838161)
+ERROR    | 2026-10-11 12:13:49,315 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+WARNING  | 2026-10-11 12:13:49,316 | aiogram.dispatcher:228 | Sleep for 4.990265 seconds and try again... (tryings = 13, bot id = 8560838161)
+ERROR    | 2026-10-11 12:13:54,313 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+WARNING  | 2026-10-11 12:13:54,313 | aiogram.dispatcher:228 | Sleep for 5.007297 seconds and try again... (tryings = 14, bot id = 8560838161)
+ERROR    | 2026-10-11 12:13:59,327 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+WARNING  | 2026-10-11 12:13:59,329 | aiogram.dispatcher:228 | Sleep for 5.135244 seconds and try again... (tryings = 15, bot id = 8560838161)
+ERROR    | 2026-10-11 12:14:04,473 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+WARNING  | 2026-10-11 12:14:04,473 | aiogram.dispatcher:228 | Sleep for 4.910265 seconds and try again... (tryings = 16, bot id = 8560838161)
+ERROR    | 2026-10-11 12:14:09,396 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+WARNING  | 2026-10-11 12:14:09,396 | aiogram.dispatcher:228 | Sleep for 5.135637 seconds and try again... (tryings = 17, bot id = 8560838161)
+ERROR    | 2026-10-11 12:14:14,551 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+WARNING  | 2026-10-11 12:14:14,557 | aiogram.dispatcher:228 | Sleep for 4.987248 seconds and try again... (tryings = 18, bot id = 8560838161)
+ERROR    | 2026-10-11 12:14:19,578 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [The network location cannot be reached. For information about network troubleshooting, see Windows Help]
+WARNING  | 2026-10-11 12:14:19,578 | aiogram.dispatcher:228 | Sleep for 4.937780 seconds and try again... (tryings = 19, bot id = 8560838161)
+INFO     | 2026-10-11 12:14:37,264 | aiogram.dispatcher:240 | Connection established (tryings = 20, bot id = 8560838161)
+ERROR    | 2026-10-11 12:14:57,719 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] The network connection was aborted by the local system
+WARNING  | 2026-10-11 12:14:57,794 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:15:09,525 | aiogram.dispatcher:240 | Connection established (tryings = 1, bot id = 8560838161)
+INFO     | 2026-10-11 12:19:50,080 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 12:19:50,086 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 12:19:50,095 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 12:19:50,097 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:19:50,368 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:19:50,381 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 12:19:58,537 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 12:19:59,036 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 12:19:59,036 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 12:19:59,036 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 12:19:59,086 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:20:18,144 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:20:18,151 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 12:20:18,151 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:20:18,158 | aiogram.event:179 | Update id=592228873 is handled. Duration 62 ms by bot id=8560838161
+INFO     | 2026-10-11 12:21:11,234 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 12:21:11,235 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 12:21:11,237 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 12:21:11,239 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:21:11,493 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:21:11,493 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 12:25:49,325 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 12:25:50,102 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 12:25:50,115 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 12:25:50,120 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 12:25:50,177 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:25:53,377 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:25:53,378 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 12:25:53,383 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:25:53,617 | aiogram.event:179 | Update id=592228874 is not handled. Duration 282 ms by bot id=8560838161
+ERROR    | 2026-10-11 12:25:53,618 | aiogram.event:326 | Cause exception while process update id=592228874 by bot id=8560838161
+ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\shop_logic.py", line 34, in btn_stars_gifts
+    reply_markup=inl.main_pay_menu(i18n)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\keyboards\inline_func.py", line 106, in main_pay_menu
+    builder.button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 322, in button
+    self._button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 251, in _button
+    button = self._button_type(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+INFO     | 2026-10-11 12:27:30,330 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 12:27:30,330 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 12:27:30,330 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 12:27:30,330 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:27:30,596 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:27:30,596 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 12:27:41,439 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 12:27:41,662 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 12:27:41,662 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 12:27:41,662 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 12:27:41,723 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:27:45,365 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:27:45,368 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 12:27:45,369 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:27:47,394 | aiogram.event:179 | Update id=592228875 is not handled. Duration 2047 ms by bot id=8560838161
+ERROR    | 2026-10-11 12:27:47,394 | aiogram.event:326 | Cause exception while process update id=592228875 by bot id=8560838161
+ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\shop_logic.py", line 34, in btn_stars_gifts
+    reply_markup=inl.main_pay_menu(i18n)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\keyboards\inline_func.py", line 106, in main_pay_menu
+    builder.button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 322, in button
+    self._button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 251, in _button
+    button = self._button_type(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+INFO     | 2026-10-11 12:28:38,216 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 12:28:38,216 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 12:28:38,220 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 12:28:38,220 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:28:38,478 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:28:38,478 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 12:28:49,568 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 12:28:50,068 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 12:28:50,068 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 12:28:50,068 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 12:28:50,118 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:28:56,468 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:28:56,471 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:28:56,471 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:28:56,869 | aiogram.event:179 | Update id=592228876 is handled. Duration 422 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:05,293 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:05,293 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:05,293 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:05,293 | aiogram.event:179 | Update id=592228877 is not handled. Duration 16 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:05,343 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:05,343 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:05,343 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:05,352 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:05,352 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:05,352 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:05,354 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:05,354 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:05,354 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:05,355 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:05,355 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:05,355 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:05,369 | aiogram.event:179 | Update id=592228878 is not handled. Duration 31 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:05,373 | aiogram.event:179 | Update id=592228879 is not handled. Duration 31 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:05,373 | aiogram.event:179 | Update id=592228880 is not handled. Duration 31 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:05,373 | aiogram.event:179 | Update id=592228881 is not handled. Duration 31 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:11,245 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:11,245 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:11,245 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:11,452 | aiogram.event:179 | Update id=592228882 is handled. Duration 217 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:15,967 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:15,976 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:15,976 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:15,978 | aiogram.event:179 | Update id=592228883 is not handled. Duration 16 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:16,142 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:16,142 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:16,142 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:16,142 | aiogram.event:179 | Update id=592228884 is not handled. Duration 0 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:16,292 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:16,292 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:16,292 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:16,292 | aiogram.event:179 | Update id=592228885 is not handled. Duration 0 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:23,328 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:23,328 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:23,328 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:23,328 | aiogram.event:179 | Update id=592228886 is not handled. Duration 0 ms by bot id=8560838161
+INFO     | 2026-10-11 12:29:23,390 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:29:23,393 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='uk', selected='uk'
+INFO     | 2026-10-11 12:29:23,393 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:29:23,393 | aiogram.event:179 | Update id=592228887 is not handled. Duration 0 ms by bot id=8560838161
+INFO     | 2026-10-11 12:30:29,887 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:30:29,888 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 12:30:29,888 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:30:30,080 | aiogram.event:179 | Update id=592228888 is handled. Duration 202 ms by bot id=8560838161
+INFO     | 2026-10-11 12:30:30,938 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:30:30,939 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 12:30:30,940 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:30:31,124 | aiogram.event:179 | Update id=592228889 is handled. Duration 202 ms by bot id=8560838161
+INFO     | 2026-10-11 12:30:32,046 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:30:32,047 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 12:30:32,047 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:30:32,148 | aiogram.event:179 | Update id=592228890 is handled. Duration 93 ms by bot id=8560838161
+INFO     | 2026-10-11 12:30:33,365 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:30:33,371 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 12:30:33,372 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 12:30:33,664 | aiogram.event:179 | Update id=592228891 is handled. Duration 296 ms by bot id=8560838161
+INFO     | 2026-10-11 12:30:34,263 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:30:34,264 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 12:30:34,264 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 12:30:34,427 | aiogram.event:179 | Update id=592228892 is handled. Duration 172 ms by bot id=8560838161
+INFO     | 2026-10-11 12:49:54,228 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 12:49:54,228 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 12:49:54,255 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 12:49:54,255 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:49:54,511 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:49:54,511 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 12:50:01,753 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 12:50:04,947 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 12:50:04,947 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 12:50:04,950 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 12:50:05,003 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:50:08,061 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:50:08,061 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 12:50:08,061 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 12:50:08,065 | aiogram.event:179 | Update id=592228894 is not handled. Duration 15 ms by bot id=8560838161
+ERROR    | 2026-10-11 12:50:08,066 | aiogram.event:326 | Cause exception while process update id=592228894 by bot id=8560838161
+ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\shop_logic.py", line 50, in main_stars
+    reply_markup=inl.stars_choise(i18n)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\keyboards\inline_func.py", line 140, in stars_choise
+    builder.button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 322, in button
+    self._button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 251, in _button
+    button = self._button_type(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+INFO     | 2026-10-11 12:57:51,605 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 12:57:51,607 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 12:57:51,612 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 12:57:51,612 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:57:51,869 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:57:51,871 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 12:58:02,322 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 12:58:02,687 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 12:58:02,687 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 12:58:02,687 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 12:58:02,769 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:58:07,998 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:58:08,006 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 12:58:08,009 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 12:58:08,046 | aiogram.event:179 | Update id=592228895 is not handled. Duration 94 ms by bot id=8560838161
+ERROR    | 2026-10-11 12:58:08,055 | aiogram.event:326 | Cause exception while process update id=592228895 by bot id=8560838161
+ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+Traceback (most recent call last):
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 321, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\outer_md.py", line 32, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\i18n_md.py", line 44, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 200, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 172, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 164, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 192, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\middleware\auth.py", line 33, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\handlers\shop_logic.py", line 50, in main_stars
+    reply_markup=inl.stars_choice(i18n)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\keyboards\inline_func.py", line 122, in stars_choice
+    builder.button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 322, in button
+    self._button(
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\aiogram\utils\keyboard.py", line 251, in _button
+    button = self._button_type(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\My_projects\Telegram_store\.venv\Lib\site-packages\pydantic\main.py", line 263, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardButton
+text
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+INFO     | 2026-10-11 12:59:39,807 | aiogram.dispatcher:625 | Polling stopped
+INFO     | 2026-10-11 12:59:39,807 | __main__:27 | Бота зупинено.
+ERROR    | 2026-10-11 12:59:39,807 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+WARNING  | 2026-10-11 12:59:39,809 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 12:59:40,059 | aiogram.dispatcher:414 | Polling stopped for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:59:40,059 | __main__:65 | Зупинено власноруч.
+INFO     | 2026-10-11 12:59:50,746 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 12:59:51,011 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 12:59:51,011 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 12:59:51,011 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 12:59:51,069 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 12:59:54,222 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:59:54,222 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='be', db='en', selected='en'
+INFO     | 2026-10-11 12:59:54,222 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 12:59:54,597 | aiogram.event:179 | Update id=592228896 is handled. Duration 391 ms by bot id=8560838161
+INFO     | 2026-10-11 12:59:55,911 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 12:59:55,915 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 12:59:55,916 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 12:59:56,055 | aiogram.event:179 | Update id=592228897 is handled. Duration 156 ms by bot id=8560838161
+ERROR    | 2026-10-11 13:34:11,359 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING  | 2026-10-11 13:34:11,373 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 13:34:22,933 | aiogram.dispatcher:240 | Connection established (tryings = 1, bot id = 8560838161)
+INFO     | 2026-10-11 13:53:10,673 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 13:53:10,676 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 13:53:10,679 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 13:53:11,921 | aiogram.event:179 | Update id=592228898 is handled. Duration 1406 ms by bot id=8560838161
+INFO     | 2026-10-11 13:53:24,098 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 13:53:24,098 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 13:53:24,103 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 13:53:24,590 | aiogram.event:179 | Update id=592228899 is handled. Duration 516 ms by bot id=8560838161
+INFO     | 2026-10-11 18:33:03,438 | __main__:19 | Логування завершено. Підготовка запуску...
+INFO     | 2026-10-11 18:33:04,196 | database.engine:31 | База даних успішно сформована!
+INFO     | 2026-10-11 18:33:04,196 | __main__:24 | Старт бота завершено.
+INFO     | 2026-10-11 18:33:04,196 | aiogram.dispatcher:597 | Start polling
+INFO     | 2026-10-11 18:33:04,254 | aiogram.dispatcher:379 | Run polling for bot @CubeClashBot id=8560838161 - 'Av-Stars Store'
+INFO     | 2026-10-11 18:33:32,823 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:33:32,824 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:33:32,824 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:33:33,179 | aiogram.event:179 | Update id=592228900 is handled. Duration 391 ms by bot id=8560838161
+INFO     | 2026-10-11 18:33:34,793 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:33:34,794 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:33:34,795 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:33:35,274 | aiogram.event:179 | Update id=592228901 is handled. Duration 500 ms by bot id=8560838161
+INFO     | 2026-10-11 18:33:36,698 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:33:36,699 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:33:36,699 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:33:36,947 | aiogram.event:179 | Update id=592228902 is handled. Duration 265 ms by bot id=8560838161
+INFO     | 2026-10-11 18:33:42,644 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:33:42,645 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:33:42,645 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:33:42,800 | aiogram.event:179 | Update id=592228903 is handled. Duration 155 ms by bot id=8560838161
+INFO     | 2026-10-11 18:33:44,048 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:33:44,060 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:33:44,063 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:33:44,387 | aiogram.event:179 | Update id=592228904 is handled. Duration 500 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:03,924 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:03,926 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:03,926 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:04,325 | aiogram.event:179 | Update id=592228905 is handled. Duration 407 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:33,304 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:33,306 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:33,307 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:33,569 | aiogram.event:179 | Update id=592228906 is handled. Duration 282 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:35,577 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:35,578 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:35,579 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:35,743 | aiogram.event:179 | Update id=592228907 is handled. Duration 171 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:37,257 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:37,258 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:37,259 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:37,441 | aiogram.event:179 | Update id=592228908 is handled. Duration 187 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:39,824 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:39,826 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='uk', selected='uk'
+INFO     | 2026-10-11 18:34:39,826 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: uk
+INFO     | 2026-10-11 18:34:40,100 | aiogram.event:179 | Update id=592228909 is handled. Duration 296 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:41,120 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:41,122 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:41,123 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:41,364 | aiogram.event:179 | Update id=592228910 is handled. Duration 250 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:42,951 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:42,951 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:42,952 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:43,323 | aiogram.event:179 | Update id=592228911 is handled. Duration 375 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:53,313 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:53,314 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:53,315 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:53,324 | aiogram.event:179 | Update id=592228912 is not handled. Duration 15 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:54,716 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:54,717 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:54,717 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:54,724 | aiogram.event:179 | Update id=592228913 is not handled. Duration 15 ms by bot id=8560838161
+INFO     | 2026-10-11 18:34:58,153 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:34:58,155 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:34:58,157 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:34:58,160 | aiogram.event:179 | Update id=592228914 is not handled. Duration 0 ms by bot id=8560838161
+INFO     | 2026-10-11 18:35:02,561 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:35:02,562 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:35:02,563 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:35:02,734 | aiogram.event:179 | Update id=592228915 is handled. Duration 171 ms by bot id=8560838161
+INFO     | 2026-10-11 18:35:10,476 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:35:10,481 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:35:10,481 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:35:10,624 | aiogram.event:179 | Update id=592228916 is handled. Duration 156 ms by bot id=8560838161
+INFO     | 2026-10-11 18:35:12,076 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:35:12,076 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:35:12,076 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:35:12,083 | aiogram.event:179 | Update id=592228917 is not handled. Duration 15 ms by bot id=8560838161
+INFO     | 2026-10-11 18:35:13,340 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:35:13,340 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:35:13,341 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:35:13,463 | aiogram.event:179 | Update id=592228918 is handled. Duration 139 ms by bot id=8560838161
+INFO     | 2026-10-11 18:35:18,283 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 18:35:18,285 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 18:35:18,285 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 18:35:18,292 | aiogram.event:179 | Update id=592228919 is not handled. Duration 14 ms by bot id=8560838161
+ERROR    | 2026-10-11 19:08:51,080 | aiogram.dispatcher:226 | Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+WARNING  | 2026-10-11 19:08:51,099 | aiogram.dispatcher:228 | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8560838161)
+INFO     | 2026-10-11 19:09:02,683 | aiogram.dispatcher:240 | Connection established (tryings = 1, bot id = 8560838161)
+INFO     | 2026-10-11 19:09:25,245 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 19:09:25,246 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 19:09:25,246 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 19:09:25,249 | aiogram.event:179 | Update id=592228920 is not handled. Duration 15 ms by bot id=8560838161
+INFO     | 2026-10-11 19:09:25,977 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 19:09:25,980 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 19:09:25,980 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 19:09:25,996 | aiogram.event:179 | Update id=592228921 is not handled. Duration 31 ms by bot id=8560838161
+INFO     | 2026-10-11 19:09:26,729 | middleware.outer_md:27 | [DBM]Користувача(user | None) завантажено в дату
+WARNING  | 2026-10-11 19:09:26,729 | middleware.i18n_md:33 | I18N MIDDLEWARE: telegram='uk', db='en', selected='en'
+INFO     | 2026-10-11 19:09:26,730 | middleware.i18n_md:42 | [TRM] Перекладач завантажено для мови: en
+INFO     | 2026-10-11 19:09:26,738 | aiogram.event:179 | Update id=592228922 is not handled. Duration 15 ms by bot id=8560838161

@@ -3,4 +3,5 @@ from aiogram.filters.callback_data import CallbackData
 class LanguageCallback(CallbackData, prefix='language'):
     code: str
     
-    
+class StarsChoiceCallback(CallbackData, prefix='stars'):
+    amount: int

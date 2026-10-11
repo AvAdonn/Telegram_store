@@ -33,7 +33,7 @@ async def my_account(
     text = i18n.get(
         'my_account',
         username=username,
-        user_id=user_in_db.tg_id,
+        user_id=str(user_in_db.tg_id).strip(),
         stars=user_in_db.stars,
         gifts=user_in_db.gifts,
         premium=user_in_db.premium,
@@ -47,7 +47,6 @@ async def my_account(
         "PROFILE I18N: object=%s, caption=%r, referral=%r, "
         "calculate=%r, coupon=%r",
         id(i18n),
-        i18n.get("my_account"),
         i18n.get("btn_referral"),
         i18n.get("btn_calculate"),
         i18n.get("btn_cupon"),

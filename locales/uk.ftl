@@ -4,11 +4,11 @@ reg_text = Зареєструйся
 guest = Гість
 my_account = 
     🪪┏Твій юзернейм: <code>@{ $username }</code>
-         ┗ID: <code>{ $user_id }</code> 
+          ┗ID: <code>{ $user_id }</code> 
     <tg-emoji emoji-id='5203996991054432397'>🎁</tg-emoji>Придбано зірок | подарунків: <b>{ $stars } | { $gifts }</b>
     <tg-emoji emoji-id='6273842691306426529'>⭐</tg-emoji>Преміум: <b>{ $premium } міс.</b>
 
-    <tg-emoji emoji-id='5235895962269935073'>🗓</tg-emoji>Дата реєстрації: <b>{ DateTime($date) }</b>
+    <tg-emoji emoji-id='5235895962269935073'>🗓</tg-emoji>Дата реєстрації: <b>{ $date }</b>
 
 btn_cupon = Промокод
 btn_referral = Запросити друга
@@ -30,3 +30,19 @@ lang_error = Помилка зміни мови
 
 support_text = @username
 btn_back_settings = Назад
+stars_gifts = вибір зірок подарунків преміумів
+
+btn_gifts = подарунки 
+btn_premium = прем
+btn_stars = зірки
+btn = тон
+
+btn_reviews = reviews
+main_stars = вибір зірок
+stars_50 = 50 зірок
+stars_100 = 100 зірок
+stars_250 = 250 зірок
+stars_500 = 500 зірок
+stars_1000 = 1000 зірок
+stars_5000 = 5000 зірок
+stars_other = інша кількість

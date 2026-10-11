@@ -1,4 +1,3 @@
-import aiogram
 from aiogram.types import Message, CallbackQuery, InputMediaPhoto
 from aiogram import Router, F
 from database.models import User

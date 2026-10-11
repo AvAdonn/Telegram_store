@@ -2,7 +2,8 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from fluentogram import TranslatorRunner
 import config.languages as config
-from keyboards.callback import LanguageCallback
+import config.const as const
+from keyboards.callback import LanguageCallback, StarsChoiceCallback
 
 
 def my_account(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
@@ -80,4 +81,48 @@ def back_settings(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
         callback_data='back_settings'
     )
     
+    return builder.as_markup()
+
+def main_pay_menu(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
+    builder = InlineKeyboardBuilder()
+    
+    builder.button(
+        text=i18n.get('btn_stars'),
+        callback_data='main:stars'
+    )
+    
+    builder.button(
+        text=i18n.get('btn_premium'),
+        callback_data='main:premium'
+    )
+    
+    builder.button(
+        text=i18n.get('btn_gifts'),
+        callback_data='main:gifts'
+    )
+    builder.button(
+        text=i18n.get('btn_ton'),
+        callback_data='main:ton'
+    )
+    builder.button(
+        text=i18n.get('btn_reviews'),
+        callback_data='reviews'
+    )
+    builder.adjust(2, 2, 1)
+    return builder.as_markup()
+
+def stars_choice(i18n: TranslatorRunner) -> InlineKeyboardMarkup:
+    builder = InlineKeyboardBuilder()
+    
+    for amount in const.STARS_CHOICE:
+        builder.button(
+            text=i18n.get(f'stars_{amount}'),
+            callback_data=StarsChoiceCallback(amount=amount).pack()
+        )
+    builder.button(
+        text=i18n.get('stars_other'),
+        callback_data='stars:other'
+    )
+    
+    builder.adjust(2, 2, 2, 1)
     return builder.as_markup()
